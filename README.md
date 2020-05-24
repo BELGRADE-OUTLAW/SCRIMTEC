@@ -1,5 +1,6 @@
 # SCRIMTEC - SCRIbd MPUB to EPUB Converter
 ---
+![Screenshot](image.png)
 
 ## Features
 - Converts MPUB to EPUB
