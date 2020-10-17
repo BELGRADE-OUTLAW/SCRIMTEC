@@ -413,7 +413,7 @@ namespace ScribdMpubToEpubConverter.Scribd
 				// Similar to the BlockContent type
 				foreach (var node in cell.Nodes)
 				{
-					if (node.WordCount == 0)
+					if (node.WordCount == 0 or node.Words == null)
 						continue;
 
 					foreach (var word in node.Words)
