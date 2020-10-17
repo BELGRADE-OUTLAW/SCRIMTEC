@@ -117,13 +117,16 @@ namespace ScribdMpubToEpubConverter.Scribd
 			if (book_metadata_content.Length < 4)
 				throw new Exception("File too short! Path: " + book_metadata_path);
 
-			var custom_type_definition = new { title = "" };
-			var json = Newtonsoft.Json.JsonConvert.DeserializeAnonymousType(
-				book_metadata_content,
-				custom_type_definition
-			);
-
-			Title = json.title;
+			JObject jObject = JObject.Parse(book_metadata_content);
+			var title = jObject["title"];
+			if (0 == title.Children().Count())
+            		{
+				Title = (string)title;
+            		}
+            		else
+            		{
+				Title = (string)title["#text"];
+			}
 			Helper.Debug("Book title: " + Title);
 		}
 
