@@ -1,6 +1,9 @@
 # SCRIMTEC - SCRIbd MPUB to EPUB Converter
 ![Screenshot](image.png)
 
+## Download
+https://github.com/BELGRADE-OUTLAW/SCRIMTEC/releases
+
 ## Features
 - Converts MPUB to EPUB
 - Decrypts DRM-encrypted books
